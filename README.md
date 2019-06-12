@@ -1,5 +1,11 @@
-# vue-ssr
-vue-ssr(实现实时服务端渲染页面)
+## 介绍
 
-#版本介绍
-vue3.0
+1. 运行
+
+node server.js
+
+## 总结
+
+1.vue ssr 安装包
+
+vue-server-renderer
