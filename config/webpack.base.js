@@ -5,6 +5,7 @@ let VueLoaderPlugin = require('vue-loader/lib/plugin');
 let { CleanWebpackPlugin } = require('clean-webpack-plugin'); //引入清除文件插件
 
 module.exports = {
+    mode:"production",
     // 出口文件
     output:{
         filename:'[name].bundle.js',// 分成client server

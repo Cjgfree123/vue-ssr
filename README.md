@@ -3,14 +3,20 @@
 运行
 
 ```
-后端服务 (服务端渲染)
-node server.js
 
-客户端(本地开发)
+后端服务 (服务端渲染)
+nodemon node-server.js
+__________________
+
+客户端(开发环境)
 npm run client:dev
 
 客户端(生产环境)
 npm run client:build
+
+服务端(生产环境)
+npm run server:build
+________________
 ```
 
 ## 安装模块
@@ -41,6 +47,8 @@ npm install  webpack webpack-cli babel-loader @babel/preset-env @babel/core vue 
 
 1.报错: clean-webpack-plugin 不是构造函数  
 
+解决: 
+
 ```
 const { CleanWebpackPlugin } = require('clean-webpack-plugin')
 
@@ -54,3 +62,10 @@ module.exports = {
 
 https://juejin.im/post/5cfe0f435188256073337e42 【参考】
 
+2. 如下，entry将会对应output文件名 ( [name].bundle.js ),如:client.bundle.js
+
+```
+entry:{
+    client: path.resolve(__dirname, "../src/client.entry.js"),
+},
+```
