@@ -3,7 +3,14 @@
 运行
 
 ```
+后端服务 (服务端渲染)
 node server.js
+
+客户端(本地开发)
+npm run client:dev
+
+客户端(生产环境)
+npm run client:build
 ```
 
 ## 安装模块
@@ -29,4 +36,21 @@ npm install  webpack webpack-cli babel-loader @babel/preset-env @babel/core vue 
     * 因为普通style-loader不支持服务端渲染，此时vue提供功能一致的 vue-style-loader插件
 
 * 处理html: html-webpack-plugin
+
+## 遇见问题
+
+1.报错: clean-webpack-plugin 不是构造函数  
+
+```
+const { CleanWebpackPlugin } = require('clean-webpack-plugin')
+
+module.exports = {
+    ...
+    plugins: [
+            new CleanWebpackPlugin({}) // options只能对象
+    ]
+}
+```
+
+https://juejin.im/post/5cfe0f435188256073337e42 【参考】
 
