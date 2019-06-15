@@ -5,7 +5,7 @@ let VueLoaderPlugin = require('vue-loader/lib/plugin')
 
 module.exports = {
     // 入口文件
-    entry:'./src/main.js',
+    entry:'./src/app.js',
     // 出口文件
     output:{
         filename:'bundle.js',
