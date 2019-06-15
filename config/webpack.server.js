@@ -14,6 +14,8 @@ module.exports = merge(base, {
     plugins:[
         // 配置服务端模板
         // 把public目录下的内容，拷贝到 dist目录下
+
+        // 后期可以使用 dllPlugin
         new HWP({
             filename:"index.ssr.html",
             template: path.resolve(__dirname,"../public/index.ssr.html"),
