@@ -1,5 +1,5 @@
 <template>
-    <div @click="show">
+    <div @click="show" class="red">
         bar com
     </div>
 </template>  
