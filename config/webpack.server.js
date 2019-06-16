@@ -3,6 +3,8 @@ let merge = require("webpack-merge");
 let path = require("path");
 let HWP = require("html-webpack-plugin");
 
+console.log(path.resolve(__dirname,"../src/server.entry.js"))
+
 module.exports = merge(base, {
     target:"node", // 打包出的结果，给node使用
     entry:{

@@ -69,3 +69,20 @@ entry:{
     client: path.resolve(__dirname, "../src/client.entry.js"),
 },
 ```
+
+3.（待解决）
+
+命中路由，但是视图没有显示?
+
+4. 问题: 使用vuex,如果 服务端操作了store,但是客户端没有同步操作，导致看到的store是旧的数据。
+
+解决:
+
+必须判断，仅仅允许在服务端操作store。
+
+5. 一般，刷新页面才会走服务端，正常切换tab与页面会走客户端。
+
+如果需要路由即走客户端，又走服务端？
+
+解决: mounted + asyncData
+
