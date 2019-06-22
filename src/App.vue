@@ -10,5 +10,8 @@
 <script>
 export default {
     name:"App",
+    metaInfo:{
+      title:"DefaultTitle",
+    }
 }
 </script>

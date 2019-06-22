@@ -70,7 +70,7 @@ entry:{
 },
 ```
 
-3.（待解决）
+3. （待解决）
 
 命中路由，但是视图没有显示?
 
@@ -85,4 +85,11 @@ entry:{
 如果需要路由即走客户端，又走服务端？
 
 解决: mounted + asyncData
+
+6. 
+
+npm run build:server // 打包出新的包
+
+nodemon node-server.js // 渲染出新的页面
+
 
