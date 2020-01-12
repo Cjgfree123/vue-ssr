@@ -1,11 +1,18 @@
 <template>
-    <div class="red">
-        foo com
-    </div>
-</template> 
+  <div>foo com</div>
+</template>    
 
-<style scoped>
-.red{
-    color: red;
+<script>
+export default {
+  name: "Foo",
+  metaInfo: {
+    title: "DefaultTitle"
+  }
+};
+</script>
+
+<style>
+div {
+  background-color: red;
 }
-</style>   
+</style>
