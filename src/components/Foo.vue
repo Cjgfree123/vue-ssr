@@ -1,5 +1,11 @@
 <template>
-    <div>
+    <div class="red">
         foo com
     </div>
-</template>    
+</template> 
+
+<style scoped>
+.red{
+    color: red;
+}
+</style>   
