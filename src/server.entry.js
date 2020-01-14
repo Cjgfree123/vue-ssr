@@ -28,6 +28,7 @@ export default (context) => {
             })).then(() => {
                 // 把vuex中的状态，挂载在上下文中的state里
                 context.state = store.state;
+                console.log("状态", store)
                 context.meta = app.$meta();
                 resolve(app);
             });

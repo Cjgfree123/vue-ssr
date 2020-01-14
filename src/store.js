@@ -5,7 +5,7 @@ import Vuex from "vuex";
 Vue.use(Vuex);
 
 export default  ()=>{
-    let store = new Vuex.store({
+    let store = new Vuex.Store({
         state:{
             user:"chen",
         },

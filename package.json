@@ -2,7 +2,6 @@
   "name": "vue-ssr-demo",
   "version": "1.0.0",
   "description": "",
-  "main": "./src/main.js",
   "scripts": {
     "client:dev": "webpack-dev-server --config ./config/webpack.client.js",
     "client:build": "webpack --config ./config/webpack.client.js",
