@@ -19,6 +19,12 @@ npm run server:build
 ________________
 ```
 
+## 目录
+
+public
+    |_index.html 客户端
+    |_index.ssr.html 服务端
+
 ## 安装模块
 
 ```
@@ -62,13 +68,15 @@ module.exports = {
 
 https://juejin.im/post/5cfe0f435188256073337e42 【参考】
 
-2. 如下，entry将会对应output文件名 ( [name].bundle.js ),如:client.bundle.js
+2. 如下，entry中键值(client), 将会对应output文件名name ( [name].bundle.js ),如:client.bundle.js
 
 ```
 entry:{
     client: path.resolve(__dirname, "../src/client.entry.js"),
 },
 ```
+
+即: webpack: output中 [name]名字，取决于entry: { k: v }中的k.
 
 3. （待解决）
 
@@ -91,5 +99,4 @@ entry:{
 npm run build:server // 打包出新的包
 
 nodemon node-server.js // 渲染出新的页面
-
 

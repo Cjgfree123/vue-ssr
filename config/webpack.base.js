@@ -8,7 +8,7 @@ module.exports = {
     mode:"production",
     // 出口文件
     output:{
-        filename:'[name].bundle.js',// 分成client server
+        filename:'[name].bundle.js',// 分成client server 备注: [name]名字，取决于entry: { k: v }中的k.
         path:path.resolve(__dirname,"../dist")
     },
     // 管理模块
