@@ -1,4 +1,6 @@
-## 介绍
+## 介绍 (vue ssr)
+
+技术: vue + express
 
 运行
 
