@@ -51,6 +51,33 @@ npm install  webpack webpack-cli babel-loader @babel/preset-env @babel/core vue 
 
 * 处理html: html-webpack-plugin
 
+## 原理
+
+```
+// 1. 安装vue-ssr(服务端渲染的包)
+let VueServerRenderer = require("vue-server-renderer");
+// 2. 加载打包后的服务端js和template文件
+let serverBundle = fs.readFileSync("./dist/server.bundle.js", "utf8");
+let template = fs.readFileSync("./dist/index.ssr.html", "utf8");
+// 3.创建渲染函数render
+let render = VueServerRenderer.createBundleRenderer(serverBundle, {
+    template, // ssr文件
+});
+
+// 4.把服务端页面，挂载到路由上
+app.get("/", async (req, res) => {
+    // 把渲染成功的字符串, 扔给客户端。 只是返回一个字符串，并没有实际vue功能
+    let context = {
+        url: req.url,
+    };
+
+    await render.renderToString(context, function (err, data) {
+        if(err) throw err;
+        res.send(data);
+    });
+});
+```
+
 ## 遇见问题
 
 1.报错: clean-webpack-plugin 不是构造函数  

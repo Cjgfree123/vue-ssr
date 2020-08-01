@@ -28,7 +28,7 @@ export default  ()=>{
         }
     });
 
-    // 判断是服务端,就允许操作store
+    // 判断是客户端,就允许操作store
     if(typeof window!== 'undefined' && window.__INITIAL_STATE__){
         store.replaceState(window.__INITIAL_STATE__);
     }
